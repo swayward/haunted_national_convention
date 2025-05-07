@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HNC - Home</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<script type="text/javascript" src="functions/vote.js"></script>
+		<!-- Added for showcase -->
+		<script type="text/javascript" src="showcase.js"></script>
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+		
+			<div class="well red">
+				<h1>Haunted National Convention</h1>
+			</div>
+			
+			<ol class="breadcrumb">
+				<li><a href="">Doc's Haunts</a></li>
+				<li><a href="index.html" class="active">Home</a></li>
+			</ol>
+			
+			<div class="row">
+			
+				<div class="col-sm-3">
+					<h4>Current Votes</h4>
+					<div class="alert alert-success fade in">Washington: <span id="washington_votes"></span></div>
+					<div class="alert alert-warning"style="width:95%">Lincoln: <span id="lincoln_votes"></span></div>
+					<div class="alert alert-danger" style="width:90%">Nixon: <span id="nixon_votes"></span></div>
+				</div>
+			
+				<div class="col-sm-3">
+					<a href="washington.html">
+						<div class="well">
+							<h4>Vote for<br />George Washinton</h4>
+							<img src="images/washington_200x242.jpg" class="img-rounded center-block img-responsive" alt="Vote for George Washington" />
+						</div>
+					</a>
+				</div>
+			
+				<div class="col-sm-3">
+					<a href="lincoln.html">
+						<div class="well">
+							<h4>Vote for<br />Abraham Lincoln</h4>
+							<img src="images/lincoln_200x250.jpg" class="img-rounded center-block img-responsive" alt="Vote for Abraham Lincoln" />
+						</div>
+					</a>
+				</div>
+			
+				<div class="col-sm-3">
+					<a href="nixon.html">
+						<div class="well">
+							<h4>Vote for<br />Richard Nixon</h4>
+							<img src="images/nixon_200x243.jpg" class="img-rounded center-block img-responsive" alt="Vote for Richard Nixon" />
+						</div>
+					</a>
+				</div>
+				
+			</div>
+			
+			<div>
+				<h4>About the HNC</h4>
+				<p>Thanks for visiting the Haunted National Convention (aka Election Haunt 2016) website.  Inspired by the <a href="https://en.wikipedia.org/wiki/Republican_National_Convention">RNC</a> and <a href="https://en.wikipedia.org/wiki/Democratic_National_Convention">DNC</a>, we decided to have a convention of our own and "Bring Back The Best".  Candidates include George <a href="http://www.mountvernon.org/digital-encyclopedia/article/cherry-tree-myth/">"I cannot tell a lie"</a> Washington, Abraham Lincoln, and Richard <a href="http://www.npr.org/templates/story/story.php?storyId=245830047">"I am not a crook"</a> Nixon.  You are welcome to vote for who to "reanimate" but keep in mind that elections sometimes are meant to go only one way. ;-) </p>
+<p>In fitting with the theme we will have several FLOTUS represented including:</p>
+<ul>
+<li>Martha Washington</li>
+<li>Mary Todd Lincoln</li>
+<li>Jacqueline Bouvier Kennedy</li>
+<li>Nancy Reagan</li>
+</ul>
+<p>
+Security will of course be present.  Around October 1st, the "Secret Service" will show up to secure the location. Helicopters on the <a href="http://www.gravediggerslocal.com/2013/10/axworthy-flying-ghost/">Axworthy rig</a> create a "no-fly" zone around the yard.  Watch your head as they come down the driveway!
+</p>
+<p>
+Drop me a line at <a href="mailto:haunt2016@docgyver.com">haunt2016</a> but I will likely be fairly busy setting things up between now and the big night.  Look forward to your comments!
+</p>
+			</div>
+			
+			<div class="well blue">
+				<h1>Haunted National Convention</h1>
+			</div>
+			
+		</div>
+		
+	</body>
+	
+	<script>
+		$(document).ready(function(){
+			read_all();
+			insert_html(); // for showcase
+	    });
+	    
+		window.setInterval(function() {
+				read_all();
+			}, 
+			5000
+		);
+	</script>	
+		
+</html>

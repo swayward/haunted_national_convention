@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HNC - Richard Nixon</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="functions/vote.js"></script>
+		
+		<!-- Added for showcase -->
+		<script src="showcase.js"></script>
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="well red">
+				<h1>Richard Nixon</h1>
+			</div>
+			<ol class="breadcrumb">
+				<li><a href="index.html">Doc's Haunts</a></li>
+				<li><a href="index.html">HNC Home</a></li>
+				<li><a href="#" class="active">Nixon</a></li>
+			</ol>
+			<div class="row">
+				<div class="col-sm-5">
+					 <img src="images/nixon.jpg" class="img-circle img-responsive" alt="Richard Nixon" />
+				</div>
+				<div class="col-sm-4">
+					<p>As our 37th president, <a href="https://en.wikipedia.org/wiki/Richard_Nixon">Richard Nixon</a> is often remembered for his involvement in the <a href="https://en.wikipedia.org/wiki/Watergate_scandal">Watergate scandal</a>.  As such we might not put him in the "bring back the best" category of the HNC. Positive things that Nixon is credited with include: getting the US out of Vietnam, bringing American POW's home, and opening diplomatic relations with China. The reason for including "Tricky Dick" has nothing to to with that.  I was looking for presidential masks for iconic/recognizable presidents and I just had to twist his <a href="http://www.npr.org/templates/story/story.php?storyId=245830047">"I am not a crook"</a> quote into a haunt slogan.  Of course that would be "I am not a spook". :-D </p>
+					<button type="button" id="voteButton" class="btn-lg btn-primary center-block" onclick="onSubmitDo('nixon')">VOTE for Nixon</button>
+					
+					<br>
+					<h4>Current Votes</h4>
+					<div class="alert alert-danger" style="width:90%">Nixon: <span id="nixon_votes"></span></div>
+					<div class="alert alert-success fade in">Washington: <span id="washington_votes"></span></div>
+					<div class="alert alert-warning"style="width:95%">Lincoln: <span id="lincoln_votes"></span></div>
+					
+				</div>
+				<div class="col-sm-3">
+					<h4>The Opponents</h4>
+					<a href="washington.html">
+						<div class="well">
+							<img src="images/washington_200x242.jpg" class="img-rounded center-block img-responsive" alt="Vote for George Washington" />
+							George Washington
+						</div>
+					</a>
+					<a href="lincoln.html">
+						<div class="well">
+							<img src="images/lincoln_200x250.jpg" class="img-rounded center-block img-responsive" alt="Vote for Abraham Lincoln" />
+							Abraham Lincoln
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="well blue">
+				<h1>Haunted National Convention</h1>
+			</div>
+		
+		</div>
+	</body>
+	
+	<script>
+		$(document).ready(function(){
+			read_all();
+			insert_html(); // for showcase
+	    });
+	    
+		window.setInterval(function() {
+				read_all();
+			}, 
+			5000
+		);
+	</script>
+	
+</html>

@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+.red {
+	background-color: red;
+	color: white;
+}
+
+.blue {
+	background-color: blue;
+	color: white;
+}
+
+.well {
+	text-align: center;
+}

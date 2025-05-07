@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HNC - George Washington</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="functions/vote.js"></script>
+		
+		<!-- Added for showcase -->
+		<script src="showcase.js"></script>
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="well red">
+				<h1>George Washington</h1>
+			</div>
+			<ol class="breadcrumb">
+				<li><a href="index.html">Doc's Haunts</a></li>
+				<li><a href="index.html">HNC Home</a></li>
+				<li><a href="#" class="active">Washington</a></li>
+			</ol>
+			<div class="row">
+				<div class="col-sm-5">
+					 <img src="images/washington.jpg" class="img-circle img-responsive" alt="George Washington" />
+				</div>
+				<div class="col-sm-4">
+					<p>Georgia Washington was the first president of the United States and, <a href="http://www.mountvernon.org/digital-encyclopedia/article/cherry-tree-myth/">thanks to a boo-ographer</a>, a well known truth teller. Playing off this myth, we decided that his campaign sign should say "Bring Back the Truth".  It is all the more poignant that many of us would like to better believe the folks in Washington.</p>
+<p>
+Visit us on Halloween night as we try to bring back Washington even if we can't bring back the truth to folks in Washington.  How do I know who we'll be "reanimating"?  Let's just say I know who wrote the play. :-D
+</p>
+					<button type="button" id="voteButton" class="btn-lg btn-primary center-block" onclick="onSubmitDo('washington')">VOTE for Washington</button>
+					
+					<br>
+					<h4>Current Votes</h4>
+					<div class="alert alert-success fade in">Washington: <span id="washington_votes"></span></div>
+					<div class="alert alert-warning"style="width:95%">Lincoln: <span id="lincoln_votes"></span></div>
+					<div class="alert alert-danger" style="width:90%">Nixon: <span id="nixon_votes"></span></div>
+					
+				</div>
+				<div class="col-sm-3">
+					<h4>The Opponents</h4>
+					<a href="lincoln.html">
+						<div class="well">
+							<a href="lincoln.html"><img src="images/lincoln_200x250.jpg" class="img-rounded center-block img-responsive" alt="Vote for Abraham Lincoln" />
+							Abraham Lincon
+						</div>
+					</a>
+					<a href="nixon.html">
+						<div class="well">
+							<img src="images/nixon_200x243.jpg" class="img-rounded center-block img-responsive" alt="Vote for Richard Nixon" />
+							Richard Nixon
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="well blue">
+				<h1>Haunted National Convention</h1>
+			</div>
+		
+		</div>
+	</body>
+	
+	<script>
+		$(document).ready(function(){
+			read_all();
+			insert_html(); // for showcase
+	    });
+	    
+		window.setInterval(function() {
+				read_all();
+			}, 
+			5000
+		);
+	</script>
+	
+</html>

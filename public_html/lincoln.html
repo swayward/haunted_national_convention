@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>HNC - Abraham Lincoln</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="functions/vote.js"></script>
+		
+		<!-- Added for showcase -->
+		<script src="showcase.js"></script>
+		
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="well red">
+				<h1>Abraham Lincoln</h1>
+			</div>
+			<ol class="breadcrumb">
+				<li><a href="index.html">Doc's Haunts</a></li>
+				<li><a href="index.html">HNC Home</a></li>
+				<li><a href="#" class="active">Lincoln</a></li>
+			</ol>
+			<div class="row">
+				<div class="col-sm-5">
+					 <img src="images/lincoln.jpg" class="img-circle img-responsive" alt="Abraham Lincoln" />
+				</div>
+				<div class="col-sm-4">
+					<p>Our 16th president, <a href="https://en.wikipedia.org/wiki/Abraham_Lincoln">Abraham Lincoln</a> is another well loved president.  I didn't come up with a slogan based on any well known Lincoln myth. I think my love for <a href="https://en.wikipedia.org/wiki/Alliteration">alliteration</a> got in the way and I couldn't help but declare "Lincoln for the Living".  It also doesn't hurt the "reanimation" theme of the year.</p>
+					<button type="button" id="voteButton" class="btn-lg btn-primary center-block" onclick="onSubmitDo('lincoln')">VOTE for Lincoln</button>
+					
+					<br>
+					<h4>Current Votes</h4>
+					<div class="alert alert-warning"style="width:95%">Lincoln: <span id="lincoln_votes"></span></div>
+					<div class="alert alert-success fade in">Washington: <span id="washington_votes"></span></div>
+					<div class="alert alert-danger" style="width:90%">Nixon: <span id="nixon_votes"></span></div>
+					
+				</div>
+				
+				
+				
+				<div class="col-sm-3">
+					<h4>The Opponents</h4>
+					<a href="washington.html">
+						<div class="well">
+							<img src="images/washington_200x242.jpg" class="img-rounded center-block img-responsive" alt="Vote for George Washington" />
+							George Washington
+						</div>
+					</a>
+					<a href="nixon.html">
+						<div class="well">
+							<img src="images/nixon_200x243.jpg" class="img-rounded center-block img-responsive" alt="Vote for Richard Nixon" />
+							Richard Nixon
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="well blue">
+				<h1>Haunted National Convention</h1>
+			</div>
+		
+		</div>
+	</body>
+	
+	<script>
+		$(document).ready(function(){
+			read_all();
+			insert_html(); // for showcase
+	    });
+	    
+		window.setInterval(function() {
+				read_all();
+			}, 
+			5000
+		);
+	</script>
+	
+</html>
